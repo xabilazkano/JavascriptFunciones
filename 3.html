@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+
+
+		let kalkulua = (kafea,cocacola,hanburgesa,adina) => {
+
+			if(Number.isInteger(kafea) && Number.isInteger(cocacola) && Number.isInteger(hanburgesa) && Number.isInteger(adina)){
+
+
+		let heriotza = Math.floor(Math.random() * (11)) + 90; //Zenbat urterekin hilko garen kalkulatzen du
+		let bizitza= heriotza-adina; //bizitzeko falta zaizkigun urteak
+
+		kafea = kafea*365*bizitza; //bizitzan edandako kafeak
+		console.log(kafea+" kafe edango dituzu zure bizi osoan.");
+
+		cocacola = cocacola*365*bizitza; //bizitzan edandako cocacolak
+		console.log(cocacola+" cocacola edango dituzu zure bizi osoan.");
+
+		hanburgesa= hanburgesa*365*bizitza; //bizitzan jandako hanburgesak
+		console.log(hanburgesa+" hanburgesa jango dituzu zure bizi osoan");
+
+		console.log("\n");
+	}
+	else{
+		console.log("Daturen bat gaizki sartu duzu. \n");
+	}
+}
+
+for (let i = 0; i <3; i++) {
+	let kafea = parseInt(prompt("Zenbat kafe hartzen dituzu egunean?"));
+	let cocacola= parseInt(prompt("Zenbat cocacola hartzen dituzu egunean?"));
+	let hanburgesa= parseInt(prompt("Zenbat hanburgesa jaten dituzu egunean?"));
+	let adina=parseInt(prompt("Zenbat urte dituzu?"));
+
+	kalkulua(kafea, cocacola, hanburgesa, adina);	
+}
+
+
+
+
+</script>
+
+</body>
+</html>

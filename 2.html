@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+
+		let adina = (animalia,urteak) =>{
+
+			if(!Number.isInteger(urteak)){
+				return "Adina gaizki sartu duzu.";
+			}
+
+
+			if(animalia=="txakurra"){ //animalia txakurra edo katua den egiaztatzen du
+				return "Zure txakurrak "+urteak*7+" txakur urte ditu."; //txakurra bada 7 aldiz biderkatuko du adina
+			}
+			else if(animalia=="katua"){
+				return "Zure katuak "+urteak*15+" katu urte ditu"; //katua bada 15 aldiz biderkatuko du adina
+			}
+			else{
+				return "Animalia okerra sartu duzu";//katua eta txakurra bakarrik onartzen ditu
+			}
+
+			
+		}
+
+
+		for(let i=0;i<3;i++){
+			let animalia=prompt("Katua ala txakurra?"); //txakurra edo katua den galdetzen du
+			let urteak=parseInt(prompt("Urte kopurua")); //adina galdetzen du
+
+			console.log(adina(animalia, urteak)); //funtzioak itzulitakoa kontsolan erakusten du
+		}
+
+	</script>
+
+</body>
+</html>

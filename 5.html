@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script type="text/javascript">
+					//30 urte bete arte emango dituzun pausoak kalkulatuko ditu egunean 2000 eta 20000 pauso artean emanda bizi erritmoaren arabera
+					let pausoak = (adina,bizitza) => {
+						if(adina<30){
+							if(bizitza=="lasaia"){
+							eguneko_pausoak=Math.floor(Math.random() * (2000)) + 5500;//egunean bataz beste emandako pausuak kalkulatzen ditu
+							let urteak = 30-adina;
+							pauso_totalak= eguneko_pausoak*365*urteak; //egunean emandako pausuak bizitzeko geratzen zaizkizun egunekin biderkatzen ditu
+							let egunak=urteak*365; //30 urte betetzeko falta diren egunak
+							console.log(pauso_totalak+" pausu emango dituzu 30 urte bete arte ("+egunak+" egun).");
+						}
+						else if(bizitza=="mugitua"){
+							eguneko_pausoak=Math.floor(Math.random() * (7500)) + 13500;//egunean bataz beste emandako
+							let urteak = 30-adina;
+							pauso_totalak= eguneko_pausoak*365*urteak;//egunean emandako pausuak bizitzeko geratzen zaizkizun egunekin biderkatzen ditu
+						let egunak=urteak*365; //30 urte betetzeko falta diren egunak
+						console.log(pauso_totalak+" pausu emango dituzu 30 urte bete arte ("+egunak+" egun).");
+					}
+					else{
+						console.log("Bizitza motaren datua oker sartu duzu.");
+					}
+				}
+				else if(adina>=30){
+					console.log("Zaharregia zara ariketa honetarako.");
+				}
+				else{
+					console.log("Adinaren datua oker sartu duzu.");
+				}
+			}
+			for(let i=0;i<3;i++){
+				let adina =parseInt(prompt("Zenbat urte dituzu?"));
+				let bizitza =prompt("Bizitza lasaia ala mugitua daramazu?")
+				pausoak(adina, bizitza);
+			}
+		</script>
+	</body>
+</html>

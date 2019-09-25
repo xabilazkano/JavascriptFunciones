@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+
+		let futuro = (izena,abizena) =>{
+			let herria = herriak[Math.floor(Math.random() * herriak.length)]; //herrien arrayetik bat aukeratzen du
+			let umeak = Math.floor(Math.random() *5);//0-4 bitarteko zenbaki bat itzultzen du
+			 return "Kaixo "+izena+" "+abizena+" "+umeak+" ume izango dituzu eta "+herria+" biziko zara.";
+
+		}
+
+		let herriak = ["Usurbilen","Ibarran","Orion","Getarian","Tolosan"];
+
+		for(let i=0;i<3;i++){ //funtzioa 3 aldiz deitzen dugu
+			let izena = prompt("Izena:");
+			let abizena = prompt("Abizena:"); //izena eta abizena erabiltzaileari eskatzen dizkiogu
+		console.log(futuro(izena,abizena)); //funtzioak itzulitakoa kontsolan erakusten dugu
+		}
+
+
+	</script>
+
+</body>
+</html>
